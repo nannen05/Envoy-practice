@@ -27,9 +27,6 @@ class NewsItem extends React.Component {
     render () {
       return <div className="component-news__item">
                   <div className="col s4">
-                      <div className="img-wrapper">
-                          <img src="https://placeimg.com/300/160/tech"/>
-                      </div>
                       <div className="header-wrapper">
                           <h2 className="white-text">{this.props.data.title}</h2>
                       </div>
@@ -62,10 +59,10 @@ class News extends React.Component {
                           <div className="component component-news">
                               <div className="component-news__wrapper">
                                   <div className="component-header">
-                                      <h4 className="white-text">
+                                      <h4>
                                           Wire
                                       </h4>
-                                      <a href="#" className="cta cta-main text-uppercase">Viea All News</a> 
+                                      <a href="#" className="cta cta-main text-uppercase">View All News</a> 
                                   </div>
                                   <div className="component-news__content">
                                       <div className="row">

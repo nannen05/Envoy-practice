@@ -68,10 +68,10 @@ class Blog extends React.Component {
                           <div className="component component-blog">
                               <div className="component-blog__wrapper">
                                   <div className="component-header">
-                                      <h4 className="white-text">
+                                      <h4>
                                           Featured Work
                                       </h4>
-                                      <a href="#" className="cta cta-main text-uppercase">Viea All Work</a> 
+                                      <a href="#" className="cta cta-main text-uppercase">View All Work</a> 
                                   </div>
                                   <div className="component-blog__content">
                                       <div className="row">
