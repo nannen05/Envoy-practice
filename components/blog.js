@@ -1,4 +1,4 @@
-// callout.js
+// blog.js
 
 import React from 'react';
 
@@ -43,7 +43,7 @@ class BlogItem extends React.Component {
                         <p className="white-text">{this.props.data.description}</p>
                       </div>
                       <div className="cta-wrapper">
-                        <a href="{this.props.data.link}" className="cta cta-main">View Project</a>
+                        <a href={this.props.data.link} className="cta cta-main">View Project</a>
                       </div>
                   </div>
               </div>
@@ -55,12 +55,9 @@ class Blog extends React.Component {
       super(props);
   }
 
-  
-
   render() {
 
     let blogList = blogData.map(function(item, i) {
-        console.log(item);
         return <BlogItem data={item}/>
     })
 
@@ -70,12 +67,11 @@ class Blog extends React.Component {
                       <div className="col s12">
                           <div className="component component-blog">
                               <div className="component-blog__wrapper">
-                                  <div className="component-blog__title">
+                                  <div className="component-header">
                                       <h4 className="white-text">
                                           Featured Work
                                       </h4>
-                                      <a href="#" className="cta cta-main text-uppercase">Viea All Work</a>
-                                      
+                                      <a href="#" className="cta cta-main text-uppercase">Viea All Work</a> 
                                   </div>
                                   <div className="component-blog__content">
                                       <div className="row">

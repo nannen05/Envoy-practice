@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 	source = require('vinyl-source-stream');
 
 
-const sassSources = ['styles/scss/styles.scss'];
+const sassSources = ['styles/scss/styles.scss', 'bourbon/*.scss'];
 const sassStyle = 'expanded';
 
 gulp.task('compass', function(){

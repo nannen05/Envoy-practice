@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 33px;
   font-weight: bold;
 }
 
@@ -39,4 +39,19 @@ h4 {
 
 h5 {
   font-size: 18px;
+}
+
+.cta-main {
+  color: #e34e33;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.cta-main:hover {
+  color: #67d9da;
+}
+
+.component-header h4 {
+  display: inline-block;
+  margin-right: 10px;
 }

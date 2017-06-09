@@ -1,0 +1,57 @@
+.component-callout {
+  padding-bottom: 50px;
+  border-bottom: 5px solid #282828;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.secondary-color {
+  color: #e34e33;
+}
+
+body {
+  background: #1d1d1d;
+  font-family: arial, san-serif;
+}
+
+section {
+  padding: 50px 0 40px;
+}
+
+.container {
+  max-width: 940px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+.cta-main {
+  color: #e34e33;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.cta-main:hover {
+  color: #67d9da;
+}
+
+.component-header h4 {
+  display: inline-block;
+  margin-right: 10px;
+}
