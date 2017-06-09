@@ -1,3 +1,8 @@
+.component-callout {
+  padding-bottom: 50px;
+  border-bottom: 5px solid #282828;
+}
+
 .white-text {
   color: #ffffff;
 }
@@ -7,6 +12,31 @@
 }
 
 body {
-  background: #333;
+  background: #1d1d1d;
   font-family: arial, san-serif;
+}
+
+section {
+  padding: 50px 0 40px;
+}
+
+.container {
+  max-width: 940px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
 }
