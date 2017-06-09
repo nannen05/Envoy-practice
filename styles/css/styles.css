@@ -1,7 +1,12 @@
-body {
-  background: #333;
+.white-text {
+  color: #ffffff;
 }
 
-section {
-  color: green;
+.secondary-color {
+  color: #e34e33;
+}
+
+body {
+  background: #333;
+  font-family: arial, san-serif;
 }

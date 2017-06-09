@@ -1,10 +1,16 @@
 $black : #333;
+$white : #ffffff;
+$secondary : #e34e33;
+
+// Helpers 
+.white-text {
+	color: $white;
+}
+.secondary-color {
+	color: $secondary;
+}
 
 body {
 	background: $black;
-}
-
-section {
-	color: green
-	
+	font-family: arial, san-serif;
 }
