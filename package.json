@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/nannen05/Envoy-practice#readme",
   "dependencies": {
+    "babelify": "^7.3.0",
     "bourbon": "^4.3.4",
     "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0",
     "gulp-connect": "^5.0.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-util": "^3.0.8"
   },
   "devDependencies": {
@@ -30,6 +32,7 @@
     "babel-preset-react": "^6.24.1",
     "browserify": "^14.4.0",
     "gulp-compass": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "vinyl-source-stream": "^1.1.0"
