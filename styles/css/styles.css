@@ -1,98 +1,9 @@
-nav {
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  position: relative;
-  height: 60px;
-}
-nav .nav-wrapper {
-  border-bottom: 0px;
-}
-nav #nav-mobile {
-  margin-left: 100px;
-}
-nav ul a {
-  line-height: 45px;
-  padding-top: 15px;
-  font-size: 13px;
-  font-weight: bold;
-}
-nav ul a:hover {
-  background-color: transparent;
-  color: #e34e33;
-}
-nav ul a.active {
-  color: #9f9f9f;
-}
-
-.component-twitter__content {
-  background-color: #464646;
-  width: 200px;
-  height: 40px;
-  position: absolute;
-  bottom: -60px;
-  right: 0;
-}
-
-.component-twitter {
-  position: relative;
-}
-.component-twitter p {
-  margin-top: 10px;
-  margin-left: 50px;
-  line-height: 20px;
-  position: absolute;
-}
-.component-twitter p span {
-  color: #67d9da;
-}
-.component-twitter img {
-  margin-left: 15px;
-  margin-top: 12px;
-  height: 16px;
-  position: absolute;
-}
-
-.square-button {
-  position: relative;
-  float: right;
-  width: 40px;
-  height: 40px;
-  background-color: #e34e33;
-  display: inline-block;
-  -webkit-transition: 0.3s;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.square-button:before {
-  height: 20px;
-  width: 3px;
-  top: 10px;
-  left: 19px;
-}
-
-.square-button:after {
-  height: 3px;
-  width: 20px;
-  top: 19px;
-  left: 10px;
-}
-
-.square-button:before,
-.square-button:after {
-  content: "";
-  position: absolute;
-  -webkit-transition: inherit;
-  -ms-transition: inherit;
-  transition: inherit;
-  background-color: #fff;
-}
-
 .component-callout {
   padding-bottom: 50px;
   border-bottom: 5px solid #282828;
 }
 
+<<<<<<< HEAD
 .component-news__item h2 {
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -350,16 +261,10 @@ nav ul a.active {
     margin-bottom: 0;
   }
 }
+=======
+>>>>>>> d3beb62c358baabf374d5f7dc0242039b0ba9b20
 .white-text {
   color: #ffffff;
-}
-
-.grey-text {
-  color: #9f9f9f;
-}
-
-.lightblue-text {
-  color: #67d9da;
 }
 
 .secondary-color {
@@ -372,12 +277,16 @@ body {
 }
 
 section {
+<<<<<<< HEAD
   padding: 30px 0;
 }
 section:first-of-type {
   padding: 0px 0;
   /*@include transform(translateY(-60px));*/
   margin-bottom: -60px;
+=======
+  padding: 50px 0 40px;
+>>>>>>> d3beb62c358baabf374d5f7dc0242039b0ba9b20
 }
 
 .container {
@@ -399,19 +308,6 @@ h4 {
 
 h5 {
   font-size: 18px;
-  margin: 10px 0 5px;
-}
-
-.image-wrapper {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  position: relative;
-}
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .cta-main {
@@ -422,16 +318,9 @@ h5 {
 }
 .cta-main:hover {
   color: #67d9da;
-  cursor: pointer;
 }
 
-.component-header {
-  border-bottom: 2px solid #282828;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
 .component-header h4 {
-  color: #9f9f9f;
   display: inline-block;
   margin-right: 10px;
 }
