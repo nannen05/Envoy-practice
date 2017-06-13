@@ -26,7 +26,7 @@ class NewsItem extends React.Component {
     }
     render () {
       return <div className="component-news__item">
-                  <div className="col s4">
+                  <div className="col s12 m4">
                       <div className="header-wrapper">
                           <h2 className="white-text">{this.props.data.title}</h2>
                       </div>
