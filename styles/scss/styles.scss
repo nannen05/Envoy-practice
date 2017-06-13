@@ -34,7 +34,7 @@ section {
 	&:first-of-type {
 		padding: 0px 0;
 		@include transform(translateY(-60px));
-		margin-bottom: -60px;
+		margin-bottom: -80px;
 	}
 }
 
