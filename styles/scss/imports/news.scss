@@ -1,0 +1,9 @@
+.component-news__item {
+	h2 {
+		@include transition(0.3s ease-in-out);
+		&:hover {
+			color: $lightblue!important;
+			cursor:pointer;
+		}
+	}
+}

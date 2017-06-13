@@ -31,7 +31,7 @@ class NewsItem extends React.Component {
                           <h2 className="white-text">{this.props.data.title}</h2>
                       </div>
                       <div className="content-wrapper">
-                        <p className="white-text">{this.props.data.articleDate}</p>
+                        <p className="grey-text">{this.props.data.articleDate}</p>
                       </div>
                       <div className="cta-wrapper">
                         <a href={this.props.data.link} className="cta cta-main">View Project</a>

@@ -1,0 +1,88 @@
+nav {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: relative;
+  height: 60px;
+
+  .nav-wrapper {
+  		border-bottom: 0px;
+  }
+  #nav-mobile {
+	  margin-left: 100px;
+	}
+   ul a {
+    line-height: 45px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-weight: bold;
+
+   	 &:hover {
+	    background-color: transparent;
+	    color: $orange;
+	 }
+	 &.active {
+	 	color: $lightgrey;
+	 }
+   }
+}
+
+.component-twitter__content {
+    background-color: #464646;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+}
+.component-twitter {
+	position: relative;
+	p {
+	  margin-top: 10px;
+	  margin-left: 50px;
+	  line-height: 20px;
+	  position: absolute;
+
+	  span {
+		  color: $lightblue;
+	  }
+ 	}
+ 	img {
+	  margin-left: 15px;
+	  margin-top: 12px;
+	  height: 16px;
+	  position: absolute;
+	}
+}
+
+.square-button{
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: $orange;
+    display: inline-block;
+    -webkit-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+.square-button:before {
+      height: 20px;
+      width: 3px;
+      top: 10px;
+      left: 19px;
+}
+.square-button:after {
+  height: 3px;
+  width: 20px;
+  top: 19px;
+  left: 10px;
+}
+.square-button:before,
+.square-button:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: inherit;
+    -ms-transition: inherit;
+    transition: inherit;
+    background-color: #fff;
+}

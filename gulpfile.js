@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
 	connect = require('gulp-connect'),
+	livereload = require('gulp-livereload'),
 	compass = require('gulp-compass'),
-	gutil = require('gulp-util');
-	browserify = require('browserify');
-	babelify = require('babelify');
+	gutil = require('gulp-util'),
+	browserify = require('browserify'),
+	babelify = require('babelify'),
 	source = require('vinyl-source-stream');
 
 
@@ -20,6 +21,7 @@ gulp.task('compass', function(){
 			.on('error', gutil.log)
 		.pipe(gulp.dest('styles/css'))
 		.pipe(connect.reload())
+		.pipe(livereload());
 });
 
 gulp.task('html', function() {
@@ -38,20 +40,24 @@ gulp.task('js', function () {
   }))
   .bundle()
   .pipe(source('bundle.js'))
-  .pipe(gulp.dest('./dist'));
+  .pipe(gulp.dest('./dist'))
+  .pipe(livereload());
 });
 
-gulp.task('watch' , function() {
-	gulp.watch('styles/scss/*.scss', ['compass'])
-	gulp.watch('*.js', ['js'])
-	gulp.watch('*.html', ['html'])
-})
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch(['*.html'], ['html']);
+  gulp.watch('styles/scss/*.scss', ['compass'])
+  gulp.watch('components/*.js', ['js']);
+  gulp.watch('*.js', ['js']);
+});
 
 gulp.task('connect', function() {
-	connect.server({
-		root: "/",
-		livereload: true
-	});
-});
+  connect.server({
+    root:  __dirname,
+    livereload: true,
+    port: 1234
+  })
+})
 
 gulp.task('default', ['html','js', 'compass', 'connect', 'watch'])

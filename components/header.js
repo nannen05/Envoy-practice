@@ -8,18 +8,30 @@ class Header extends React.Component {
   }
 
   render() {
+
     return <nav>
+            <div className="nav-wrapper component component-header">
               <div className="container">
-                  <div className="nav-wrapper">
-                    <a href="#" className="brand-logo">Logo</a>
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-                      <li><a href="sass.html">Sass</a></li>
-                      <li><a href="badges.html">Components</a></li>
-                      <li><a href="collapsible.html">JavaScript</a></li>
-                    </ul>
-                  </div>
+                <a href="#" className="brand-logo"><img src="images/logo.png"/></a>
+                <ul id="nav-mobile" className="hide-on-med-and-down">
+                  <li><a href="#">Work</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Ventures</a></li>
+                  <li><a className="active" href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+                <div className="component component-twitter right">
+                    <div className="component-twitter__content">
+                        <img src="images/twitter.png"/>
+                        <p><span>Tweet Tweet.</span></p>
+                        <div className="square-button"></div>
+                    </div>
+                </div>
               </div>
-           </nav>
+            </div>
+          </nav>
+
   }
 }
 

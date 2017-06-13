@@ -1,12 +1,22 @@
 @import 'bourbon/bourbon';
+
 @import 'imports/variables';
+@import 'imports/header';
 @import 'imports/callout';
+@import 'imports/news';
+@import 'imports/blog';
 @import 'imports/slider';
 
 
 // Helpers 
 .white-text {
 	color: $white;
+}
+.grey-text {
+    color: $lightgrey;
+}
+.lightblue-text {
+	color: $lightblue;
 }
 .secondary-color {
 	color: $orange;
@@ -22,6 +32,8 @@ section {
 
 	&:first-of-type {
 		padding: 0px 0;
+		@include transform(translateY(-60px));
+		margin-bottom: -60px;
 	}
 }
 
@@ -44,6 +56,7 @@ h4 {
 
 h5 {
 	font-size: 18px;
+	margin: 10px 0 5px;
 }
 
 .image-wrapper {

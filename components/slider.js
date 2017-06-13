@@ -4,11 +4,11 @@ import React from 'react';
 
 const SliderData = [
     {
-        title: "The Iphone Unchained",
-        description: "Boost Mobile recognized the need to elevate and refresh its brand to speak to a broader audience.",
-        imageUrl: "https://d3ciwvs59ifrt8.cloudfront.net/0f85269b-d32e-41c5-8859-fa3f391e0897/24a15f21-c96a-42d4-9128-6509480fbb25_h.png",
+        title: "The Iphone Unchained.",
+        description: "Tarantino’s outrageous film Djano Unchained needed an equally in your face mobile experience. Bloody good awesomeness ensued.",
+        imageUrl: "images/django.png",
         link: "#",
-        position: "bottom-left"
+        position: "top-left"
     },
     {
         title: "The Iphone Unchained",
@@ -53,7 +53,7 @@ class SliderItem extends React.Component {
                               <h2>{this.props.data.title}</h2>
                           </div>
                           <div className="content-wrapper">
-                            <p>{this.props.data.description}</p>
+                            <p>{this.props.data.description} <a href={this.props.data.link}>View Project</a></p>
                           </div>
                         </div>
                       </div>
@@ -73,6 +73,7 @@ class Slider extends React.Component {
 	    loop:true,
 	    margin:0,
 	    nav:true,
+	    navText: ["",""],
 	    dots: true
     });
   }
