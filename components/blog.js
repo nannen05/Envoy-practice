@@ -33,7 +33,7 @@ class BlogItem extends React.Component {
     render () {
       return <div className="component-blog__item">
                   <div className="col s12 m4">
-                      <div className="img-wrapper">
+                      <div className="image-wrapper">
                           <img src={this.props.data.imageUrl}/>
                       </div>
                       <div className="header-wrapper">

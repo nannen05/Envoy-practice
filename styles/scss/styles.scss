@@ -8,7 +8,7 @@
 @import 'imports/slider';
 @import 'imports/media-queries';
 
- 
+ // Helper Classes
 .white-text {
 	color: $white;
 }
@@ -32,13 +32,17 @@ section {
 
 	&:first-of-type {
 		padding: 0px 0;
-		@include transform(translateY(-60px));
-		margin-bottom: -80px;
+		@include transform(translateY(0));
+		margin-bottom: 0px;
 	}
 }
 
 .container {
 	max-width: 940px;
+	position: relative;
+}
+.row {
+	margin-bottom: 0px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -46,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h2 {
-	font-size: 33px;
+	font-size: 28px;
 	font-weight: bold;
 }
 

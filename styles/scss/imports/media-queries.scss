@@ -1,43 +1,64 @@
-@media (max-width: 1100px) {
+@media (min-width: 1100px) {
     nav ul a {
-        padding: 15px 8px 0px;
+        padding: 15px 15px 0;
     }
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
     nav {
-        height: 120px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+
+        .brand-logo {
+            position: absolute;
+            left: 0;
+            @include transform(translateY(0));
+        }
+        .button-collapse {
+            float: right;
+            margin: 0;
+            color: $lightgrey;
+            i {
+                font-size: 36px;
+
+             }
+        }
     }
-    nav .brand-logo {
-        position: relative;
+    
+    .component-callout__title,
+    .component-news__item {
+        h2 {
+            font-size: 32px;
+        }
     }
-    .component-twitter.right {
-        float: none!important;
-    }
+    
     .component-twitter__content {
-        position: relative;
-        bottom: 0px;
+        bottom: -20px;
         right: 0;
-        max-width: 300px;
-        width: 100%;
-        margin: 0 auto;
+        width: 200px;
+        float: right;
     }
-    section:first-of-type {
-        padding: 0px 0;
-        @include transform(translateY(-120px)!important);
-        margin-bottom: -120px!important;
+
+    section {
+        &:first-of-type {
+            padding: 0px 0;
+            @include transform(translateY(-60px)!important);
+            margin-bottom: -80px!important;
+        }
     }
-    .component-slider__wrapper h2 {
-        font-size: 30px;
-        line-height: 30px;
+
+    .component-slider__wrapper {
+        h2 {
+            font-size: 40px; 
+            line-height: 40px;
+        }
     }
 }
-@media (max-width: 600px) {
-  .component-callout__title h2 {
-        font-size: 28px;
-  }
+
+@media (min-width: 600px) {
   .component-blog__item .col.s12,
   .component-news__item .col.s12 {
-      margin-bottom: 30px;
+      margin-bottom: 0px;
   }
   .component-blog__item:last-of-type .col.s12,
   .component-news__item:last-of-type .col.s12 {

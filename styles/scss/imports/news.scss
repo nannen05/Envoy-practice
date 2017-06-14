@@ -6,4 +6,10 @@
 			cursor:pointer;
 		}
 	}
+	.col.s12 {
+		margin-bottom: 30px;
+	}
+	&:last-of-type .col.s12 {
+      margin-bottom: 0;
+  	}
 }
