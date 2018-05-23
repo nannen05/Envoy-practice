@@ -18,7 +18,7 @@ gulp.task('compass', function(){
 			style: sassStyle
 		}))
 			.on('error', gutil.log)
-		.pipe(gulp.dest('styles/css'))
+		.pipe(gulp.dest('./dist'))
 		.pipe(connect.reload())
 		.pipe(livereload());
 });
@@ -60,3 +60,5 @@ gulp.task('connect', function() {
 })
 
 gulp.task('default', ['html','js', 'compass', 'connect', 'watch'])
+
+gulp.task('build', ['html', 'js', 'compass'])
