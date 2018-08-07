@@ -1,6 +1,9 @@
 // blog.js
 
 import React from 'react';
+import { databaseRef } from "../firebase/firebase";
+
+const featuredWorkRef = databaseRef.ref('flamelink/environments/production/content/featuredWork/en-US');
 
 const blogData = [
     {
@@ -53,12 +56,31 @@ class BlogItem extends React.Component {
 class Blog extends React.Component {
   constructor(props){
       super(props);
+
+      this.state = {
+          featuredWork: ""
+      }
+  }
+
+  componentWillMount() {
+
+
+      console.log(this.state)
+  }
+
+  componentDidMount() {
+    featuredWorkRef
+      .once('value')
+      .then(data => {
+          let mainSlider = data.val() || []
+          this.setState({featuredWork: mainSlider})
+      })
   }
 
   render() {
 
     let blogList = blogData.map(function(item, i) {
-        return <BlogItem data={item}/>
+        return <BlogItem data={item} key={i}/>
     })
 
     return <section>
@@ -71,7 +93,7 @@ class Blog extends React.Component {
                                       <h4>
                                           Featured Work
                                       </h4>
-                                      <a href="#" className="cta cta-main text-uppercase">View All Work</a> 
+                                      <a href="#" className="cta cta-main text-uppercase">View All Work</a>
                                   </div>
                                   <div className="component-blog__content">
                                       <div className="row">

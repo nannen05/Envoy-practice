@@ -1,34 +1,9 @@
 // slider.js
 
-import React from 'react';
-
-const SliderData = [
-    {
-        title: "The Iphone Unchained.",
-        titleColor: "red",
-        description: "Tarantino’s outrageous film Djano Unchained needed an equally in your face mobile experience. Bloody good awesomeness ensued.",
-        imageUrl: "images/django.png",
-        link: "#",
-        position: "top-left"
-    },
-    {
-        title: "SAY HELLO TO THE future of vizio",
-        titleColor: "red",
-        description: "When Vizio needed to pull the wrap off its new family of PCs they called on Envoy to conceptualize, direct and produce a series of short product films.",
-        imageUrl: "images/vizio.png",
-        link: "#",
-        position: "top-right"
-    },
-    {
-        title: "WORLD MEET ULTRA. ULTRA MEET WORLD.",
-        titleColor: "blue",
-        description: "Asked to launch T-Mobile’s new internationally-minded brand, Ultra Mobile, we created a campaign that’s creativity knows no borders",
-        imageUrl: "images/data.png",
-        link: "#",
-        position: "top-left"
-    },
-
-]
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../actions";
+import _ from "lodash";
 
 class SliderItem extends React.Component {
     constructor(props){
@@ -36,9 +11,9 @@ class SliderItem extends React.Component {
     }
     render () {
 
-      let sliderPosition = "slider-position slider-position__" + this.props.data.position;
-      let titleColor = "header-" + this.props.data.titleColor;
-      let linkColor = "link-" + this.props.data.titleColor;
+      let sliderPosition = "slider-position slider-position__" + this.props.data.slidePosition;
+      let titleColor = "header-red";
+      let linkColor = "link-red";
 
       return <div className="component-slider__item">
                   <div className="image-wrapper">
@@ -48,10 +23,10 @@ class SliderItem extends React.Component {
                       <div className="container">
                         <div className={sliderPosition}>
                           <div className="header-wrapper">
-                              <h2 className={titleColor}>{this.props.data.title}</h2>
+                              <h2 className={titleColor}>{this.props.data.slideTitle}</h2>
                           </div>
                           <div className="content-wrapper">
-                            <p>{this.props.data.description} <a className={linkColor} href={this.props.data.link}>View Project</a></p>
+                            <p>{this.props.data.slideCopy} <a className={linkColor} href={this.props.data.link}>View Project</a></p>
                           </div>
                         </div>
                       </div>
@@ -61,26 +36,29 @@ class SliderItem extends React.Component {
 }
 
 class Slider extends React.Component {
-  constructor(props){
-      super(props);
+
+  componentWillMount() {
+      this.props.fetchMainSlider()
+
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop:true,
+        margin:0,
+        nav:true,
+        navText: ["",""],
+        dots: true
+      });
   }
 
   componentDidMount() {
-    $(".owl-carousel").owlCarousel({
-	    items: 1,
-	    loop:true,
-	    margin:0,
-	    nav:true,
-	    navText: ["",""],
-	    dots: true
-    });
+
   }
 
   render() {
 
-    let sliderList = SliderData.map(function(item, i) {
-        return <SliderItem data={item}/>
-    })
+    let sliderList =  _.map(this.props.data, function(value, key) {
+			return <SliderItem data={value} key={key}/>
+		})
 
     return <section>
               <div className="component component-slider">
@@ -95,4 +73,10 @@ class Slider extends React.Component {
   }
 }
 
-export default Slider;
+const mapStateToProps = ({ data }) => {
+  return {
+    data
+  };
+};
+
+export default connect(mapStateToProps, actions)(Slider);

@@ -49,7 +49,7 @@ class News extends React.Component {
   render() {
 
     let NewsList = newsData.map(function(item, i) {
-        return <NewsItem data={item}/>
+        return <NewsItem data={item} key={i}/>
     })
 
     return <section>
@@ -62,7 +62,7 @@ class News extends React.Component {
                                       <h4>
                                           Wire
                                       </h4>
-                                      <a href="#" className="cta cta-main text-uppercase">View All News</a> 
+                                      <a href="#" className="cta cta-main text-uppercase">View All News</a>
                                   </div>
                                   <div className="component-news__content">
                                       <div className="row">
